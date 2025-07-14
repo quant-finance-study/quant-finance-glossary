@@ -110,6 +110,39 @@ $$
 > [See also: Future value annuity factor](#future-value-annuity-factor).
 > [See also: Present value annuity factor](#present-value-annuity-factor).
 
+### Annuity Due
+> Cash flows pattern in which **level cash flows** occur at **regular intervals**, but the **first cash flow occurs inmediately**.
+$$
+\begin{equation}
+FV_{\text{due}} = CF \sum_{t = 1}^{N} (1 + i)^{N - t + 1}
+\end{equation}
+$$
+> Which is equal to the future value of an ordinary annuity multiplied by a factor of $1 + i$:
+$$
+\begin{equation}
+FV_{\text{due}} = CF[\text{Future value annuity factor (ordinary) for N and i}](1 + i)
+\end{equation}
+$$
+
+> The present value of the annuity due is calculated adjusting the ordinary annuity formula for the different number of discount periods:
+$$
+\begin{equation}
+PV_{\text{due}} = CF \sum_{t = 1}^{N} \frac{1}{(1 + i)^{t - 1}}
+\end{equation}
+$$
+> Since the cash flows in the annuity due situation are each discounted one less period than the corresponding cahs flows in the ordinary annuity, the **present value** of the **annuity due** is **greater** than the **present value** of the **ordinary annuity** for an **equivalent amount** and **number of cash flows**.
+$$
+\begin{equation}
+PV_{\text{due}} = CF[\text{Present value annuity factor (ordinary) for N and i}](1 + i)
+\end{equation}
+$$
+
+### Amortization
+> As the payments are made, the remainder is applied to repayment of the principal, which is also referred to as the **scheduled principal repayment**.
+
+[See also: Loan Amortization](#loan-amortization)
+
+
 [Go to: Table of contents](#table-of-contents)
 
 ---
@@ -198,6 +231,11 @@ $$
 ### Cash Flows
 > 
 
+### Calcualtion of Interest Rates and Yields
+> The calculation of the present or future value of a lump-sum or set of cash flows requires information on the timing of cash flows and the compound or discount rate.
+> By calculating the yield or implied interest rate, we can the compare investment or financing opportunities.
+> We first look at how interest rates are stated and how the effective interest rate can be calculated based on this stated rate, and then we look at how to calculate the yield, or rate of return, on a set cash flows.
+
 [Go to: Table of contents](#table-of-contents)
 
 ---
@@ -210,6 +248,17 @@ $$
 
 ### Depreciation
 > A negative growth.
+
+### Deferred Annuity
+> Annuity that has a **stream of cash flows** of **equal amounts** at **regular periods starting at some time after the end of the first period**.
+> We determine the **present value** of the **ordinary annuity** and then **discount** this **present value** to an **earlier period**.
+
+> We can solve this in two steps:
+1. Solve for the present value of the withdrawals.
+2. Discount this present value to the present.
+
+[See also: Annuities](#annuities)
+
 
 [Go to: Table of contents](#table-of-contents)
 
@@ -298,6 +347,20 @@ $$
 \end{equation}
 $$
 
+### Fully Amortizing Loan
+> The loan payments are determined such that after the last payment is made there is no loan balance oustanding.
+
+[See also: Loan Amortization](#loan-amortization)
+
+### Floating-rate Loan
+> In many loans, the interest rate may change during th loan.
+> The new loan rate at the **reset date** is **determined by a formula** composed of two parts:
+1. **Reference rate**
+2. **Quoted margin**: **spread** that is added to the reference rate. Depends on the credit of the borrower.
+
+> A floating rate loan requires a recalculation fo the loan payment and payment schedule at each time the loan rate is reset.
+
+
 [Go to: Table of contents](#table-of-contents)
 
 ---
@@ -373,6 +436,44 @@ $$
 > **Repayment of a loan** with **equal payments** over a **specified period of time**.
 
 > Each successive payment pays off a greater amount of the loan - as the principal amount of the loan is reduced, less of each payment goes to paying off interest and more goes to reducing the loan principal.
+
+### Loan Amortization
+> The process of **calculating** the **loan payments** that **amortize** the **loaned amount**. 
+> We can determine the **amount of the loan payments** once we know the **frequency of payments**, the **intertest rate**, and the **number of payments**.
+> If an amount is loaned and the repaid in installments, we say that the **loan is amortized**.
+$$
+\begin{equation}
+\begin{aligned}
+PV &= \sum_{t = 1}^{N} \frac{CF}{(1 + i)^t} \\
+\text{Amount loaned} &= \sum_{t = 1}^{N} \frac{\text{Loan payment}}{(1 + i)^t}
+\end{aligned}
+\end{equation}
+$$
+> We want to solve for the **loan payment**, that is, the **amount of the annuity**.
+
+> We can calculate the **amount of interest** and **principal repayment associated** with **each loan payment** using **loan amortization schedule**.
+
+> Even though the loan payment each year is the same, the proportion of interest and principal differes with each payment.
+
+> As the principal remaining on the loan declines, less interest is paid with each payment.
+
+> Loan amortization works the same whether this is a mortgage loan to purchase a home, a term loan, or any other loan such as an automobile loan in which the interest paid is determined on the basis of the remaining amount of the loan.
+> The calculation of the loan amortization can be modified to suit different principal repayments, such as **additional lump-sum payments**, known as **ballon payments**.
+$$
+\begin{equation}
+\begin{aligned}
+\text{Amount loaned} &= \left[ \sum_{t = 1}^{N} \frac{\text{Loan payment}}{(1 + i)^t} \right] \\ 
+&+ \frac{\text{Balloon payment}}{(1 + i)^N}
+\end{aligned}
+\end{equation}
+$$
+
+> The same mathematics work with [term loans(#term-loans)].
+
+[See also: Amortization](#amortization)
+[See also: Fully Amortizating Loan](#fully-amortizing-loan)
+[See also: Floating-rate Loan](#floating-rate-loan)
+
 
 [Go to: Table of contents](#table-of-contents)
 
@@ -486,6 +587,32 @@ $$
 \end{equation}
 $$
 
+### Perpetuity
+> **Perpetual annuity**.
+> A **series of clash flows** that occur at **regular intervals, forever**.
+
+> Simplifying, recognizing that the cash flows $CF_t$ are the same in each period, and using summation notaion:
+$$
+\begin{equation}
+\begin{aligned}
+PV &= CF_{1} \left( \frac{1}{1 + i} \right)^{1} + ... + CF_{\infty} \left( \frac{1}{1 + i} \right)^{\infty} \\
+&= CF \sum_{t = 1}^{\infty} \left( \frac{1}{1 + i} \right)^t
+\end{aligned}
+\end{equation}
+$$
+> As the **number of discounting periods** approaches **infinity**, the **summation** approaches **$1/i$**.
+
+> The present value of a perpetual annuity is very close to:
+$$
+\begin{equation}
+PV = \frac{CF}{i}
+\end{equation}
+$$
+
+> [See also: Cash Flows](#cash-flows)
+> [See also: Present Value](#present-value)
+
+
 [Go to: Table of contents](#table-of-contents)
 
 ---
@@ -566,6 +693,10 @@ $$
 > [See also: End-of-period Cash Flows](#end-of-period-cash-flows-)
 > [See also: Yield Curve](#yield-curve)
 
+### Term Loans
+> **Loans** usually **repaid in installments** either **monthly, quarterly, semiannually, or annually**.
+
+
 [Go to: Table of contents](#table-of-contents)
 
 ---
@@ -588,8 +719,13 @@ $$
 
 ## Y
 
+### Yield
+>
+
 ### Yield Curve
 > The relationship between **interest rates on investments** and the **length of time investment must be held**.
+
+[See also: Yield](#yield)
 
 [Go to: Table of contents](#table-of-contents)
 

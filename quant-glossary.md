@@ -68,6 +68,7 @@ $$
 ### Annuities
 > A **series of cash flows** of **equal amount**, occurring at **even intervals**. 
 > Evaluate a series of level cash flows - each cash flow is the same amount as the others - received at regular intervals.
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -76,16 +77,19 @@ FV &= \sum_{t = 1}^{N} {CF (1 + i)^{N - t}} \\
 \end{aligned}
 \end{equation}
 $$
+
 $$
 \begin{equation}
 FV = CF \frac{(1 + i)^N - 1}{i}
 \end{equation}
 $$
+
 > $t$: time period corresponding to a particular cash flow.
 
 > This equation tells us that the **future value** of a **level series of cash flows**, occurring at **regular intervals** **beginning one period from today**, is equal to the amount **of cash flows multiplied** by the **sum of the compound factors**.
 
 > The equation for the present value of a series of level cash flows beginning after one period simplifies to:
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -95,6 +99,7 @@ PV &= \sum_{t = 1}^{N} {CF \left( \frac{1}{(1 + i)} \right)^t} \\
 \end{aligned}
 \end{equation}
 $$
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -103,6 +108,7 @@ PV &= CF \frac{1 - \frac{1}{(1 + i)^N}}{i} \\
 \end{aligned}
 \end{equation}
 $$
+
 > This equations tells us that the **present value** of an **annuity** is equal to the **amount of one cash flow multiplied** by the **sum of the discount factors**.
 
 > These equations are examples of [ordinary annuities](#ordinary-annuity).
@@ -112,12 +118,15 @@ $$
 
 ### Annuity Due
 > Cash flows pattern in which **level cash flows** occur at **regular intervals**, but the **first cash flow occurs inmediately**.
+
 $$
 \begin{equation}
 FV_{\text{due}} = CF \sum_{t = 1}^{N} (1 + i)^{N - t + 1}
 \end{equation}
 $$
+
 > Which is equal to the future value of an ordinary annuity multiplied by a factor of $1 + i$:
+
 $$
 \begin{equation}
 FV_{\text{due}} = CF[\text{Future value annuity factor (ordinary) for N and i}](1 + i)
@@ -125,12 +134,15 @@ FV_{\text{due}} = CF[\text{Future value annuity factor (ordinary) for N and i}](
 $$
 
 > The present value of the annuity due is calculated adjusting the ordinary annuity formula for the different number of discount periods:
+
 $$
 \begin{equation}
 PV_{\text{due}} = CF \sum_{t = 1}^{N} \frac{1}{(1 + i)^{t - 1}}
 \end{equation}
 $$
+
 > Since the cash flows in the annuity due situation are each discounted one less period than the corresponding cahs flows in the ordinary annuity, the **present value** of the **annuity due** is **greater** than the **present value** of the **ordinary annuity** for an **equivalent amount** and **number of cash flows**.
+
 $$
 \begin{equation}
 PV_{\text{due}} = CF[\text{Present value annuity factor (ordinary) for N and i}](1 + i)
@@ -160,11 +172,13 @@ $$
 
 ### Basic Valuation Factor
 > [Future Value](#future-value) with [Compound Interest](#compound-interest):
+
 $$
 \begin{equation}
 FV = PV (1 + i)^N
 \end{equation}
 $$
+
 - $N$: **number of compounding periods**.
 - $(1 + i)^N$: **[Compound Factor](#compound-factor)**.
 
@@ -226,6 +240,7 @@ $$
 FV = PV e^{N(APR)}
 \end{equation}
 $$
+
 > $N$: compounded years.
 
 ### Cash Flows
@@ -301,6 +316,7 @@ $$
 
 ### Future Value
 > 
+
 $$
 \begin{equation}
 \text{Future value} = \text{Present value} + \text{Interest}
@@ -317,6 +333,7 @@ FV &= PV + (PV \cdot i) \\
 $$
 
 > Future Value with [Simple Interest](#simple-interest):
+
 $$
 \begin{equation}
 FV = PV (1 + i)
@@ -324,16 +341,19 @@ FV = PV (1 + i)
 $$
 
 > Future Value with [Compound Interest](#compound-interest) ([Basic Valuation Factor](#basic-valuation-factor)):
+
 $$
 \begin{equation}
 FV = PV (1 + i)^N
 \end{equation}
 $$
+
 - $N$: **number of compounding periods**.
 - $(1 + i)^N$: **[Compound Factor](#compound-factor)**.
 
 ### Future Value Annuity Factor
 > Sum of the **compounding factors** for a given interest rate $i$, and number of periods $N$.
+
 $$
 \begin{equation}
 \sum_{t = 1}^{N} (1 + i)^{N - t}
@@ -341,6 +361,7 @@ $$
 $$
 
 > An alternative formula for the sum of the compound factos for large numbers of periods is:
+
 $$
 \begin{equation}
 \text{Future value annuity factor} = \frac{(1 + i)^N - 1}{i}
@@ -373,11 +394,14 @@ $$
 > We can express the change in the value of the savings balance (the difference between the ending value and the beginning value).
 
 ### Geometric Average Return
+> 
+
 $$
 \begin{equation}
 i = \sqrt[N]{\frac{FV}{PV}} - 1
 \end{equation}
 $$
+
 - $N$: number of compounding periods
 - $FV$: Future value
 - $PV$: Present value
@@ -441,6 +465,7 @@ $$
 > The process of **calculating** the **loan payments** that **amortize** the **loaned amount**. 
 > We can determine the **amount of the loan payments** once we know the **frequency of payments**, the **intertest rate**, and the **number of payments**.
 > If an amount is loaned and the repaid in installments, we say that the **loan is amortized**.
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -449,6 +474,7 @@ PV &= \sum_{t = 1}^{N} \frac{CF}{(1 + i)^t} \\
 \end{aligned}
 \end{equation}
 $$
+
 > We want to solve for the **loan payment**, that is, the **amount of the annuity**.
 
 > We can calculate the **amount of interest** and **principal repayment associated** with **each loan payment** using **loan amortization schedule**.
@@ -459,6 +485,7 @@ $$
 
 > Loan amortization works the same whether this is a mortgage loan to purchase a home, a term loan, or any other loan such as an automobile loan in which the interest paid is determined on the basis of the remaining amount of the loan.
 > The calculation of the loan amortization can be modified to suit different principal repayments, such as **additional lump-sum payments**, known as **ballon payments**.
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -489,6 +516,7 @@ $$
 FV = PV(1 + i_1)(1 + i_2)(1 + i_3)...(1 + i_N)
 \end{equation}
 $$
+
 > $i_N$: interest rate for period $N$.
 
 > [See alse: Compounding](#compounding)
@@ -521,6 +549,7 @@ $$
 > Special form of [annuity](#annuities), where the first cash flow occurs at the end of the first period.
 
 > Future value of an ordinary annuity:
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -531,6 +560,7 @@ FV &= \sum_{t = 1}^{N} {CF (1 + i)^{N - t}} \\
 $$
 
 > Present value of an ordinary annuity:
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -540,6 +570,7 @@ PV &= \sum_{t = 1}^{N} {CF \left( \frac{1}{(1 + i)} \right)^t} \\
 \end{aligned}
 \end{equation}
 $$
+
 > $t$: time period corresponding to a particular cash flow.
 
 [Go to: Table of contents](#table-of-contents)
@@ -574,6 +605,7 @@ $$
 
 ### Present Value Annuity Factor
 > Sum of the **discounting factors** for a given interest rate $i$, and number of periods $N$.
+
 $$
 \begin{equation}
 \sum_{t = 1}^{N} \frac{1}{(1 + i)^{t}}
@@ -581,6 +613,7 @@ $$
 $$
 
 > Another more convenient way of solving for the PV of an annuity is to rewrite the factor as:
+
 $$
 \begin{equation}
 \text{Present value annuity factor} = \frac{1 - \frac{1}{(1 + i)^N}}{i}
@@ -592,6 +625,7 @@ $$
 > A **series of clash flows** that occur at **regular intervals, forever**.
 
 > Simplifying, recognizing that the cash flows $CF_t$ are the same in each period, and using summation notaion:
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -600,9 +634,11 @@ PV &= CF_{1} \left( \frac{1}{1 + i} \right)^{1} + ... + CF_{\infty} \left( \frac
 \end{aligned}
 \end{equation}
 $$
+
 > As the **number of discounting periods** approaches **infinity**, the **summation** approaches **$1/i$**.
 
 > The present value of a perpetual annuity is very close to:
+
 $$
 \begin{equation}
 PV = \frac{CF}{i}
@@ -674,12 +710,14 @@ PV &= CF_0 \left( \frac{1}{1 + i} \right)^0 + CF_1 \left( \frac{1}{1 + i} \right
 \end{aligned}
 \end{equation}
 $$
+
 > The present value of a series of cash flows is the sum of the products of each cash flow and its corresponding discount factor.
 
 > In many real-world applications multiple interest rates are used. 
 > The interest rate that can be earned depends on the amount of time the investment is expected to be **outstanding**.
 > Typically, there is a **positive relationship** between **interest rates** and the **length of time the investment must be held**.
 > The formula for the PV of a series of cash flows when there is a different interest rate:
+
 $$
 \begin{equation}
 \begin{aligned}

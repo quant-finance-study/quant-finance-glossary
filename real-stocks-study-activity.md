@@ -17,21 +17,25 @@ It reflects what the market currently values the stock at.
 Shows how much the stock has gained or lost in value over time.
 *Note*: Longer time frames help identify trends beyond short-term noise.
 - **P/E ratio (Price/Earnings)**: The ratio of the stock's current price to its earnings per share (EPS).
+
 $$
 \begin{equation}
 P/E = \frac{\text{Price per share}}{\text{Earnings per share} (EPS)}
 \end{equation}
 $$
+
 It tells how much investors are willing to pay per dollar of earnings.
     - High P/E: Market expects strong growth (but maybe overvalued).
     - Low P/E: Possibly undervalued or lower growth prospects.
 *Example*: P/E of 30 means investors pay $30 for every $1 the company earns.
 - **Dividend yield (%)**: The annual dividends paid by the company divided by its stock price, expressed as a percentage.
+
 $$
 \begin{equation}
 \text{Dividend Yield} = \frac{\text{Annual dividends per share}}{{Price per share}} \times 100
 \end{equation}
 $$
+
 Shows how much cash flow (income) you earn from dividends relative to the price you paid.
 *Example*: Dividend yield of 2% means you earn $2/year for every $100 invested.
 *Note*: Some companies (like Tesla) don't pay dividends.
